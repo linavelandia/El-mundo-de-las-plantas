@@ -5,23 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../CSS/registro.css">
 </head>
 <body>
-    <div>
-        <form action="index.html" class="Login">
+    <nav class="nav">
+        <div class="nav_container">
+            <label for="menu" class="nav_label">
+                <img src="../assets/menu.svg" alt="nav_img">
+            </label>
+            <input type="checkbox" id="menu" class="nav_input">
+
+            <div class="nav_menu">
+                <a href="" class="nav_item">categorias</a>
+                <a href=""class="nav_item">inicio</a>
+                <a href=""class="nav_item">contacto</a>
+            </div>
+
+            <h1>El mundo de las plantas</h1>
+
+            <div class="car_shopping">
+                <a href="" id="car"></a>
+            </div>
+           <!-- <input type="checkbox" id="car" class="nav_input_car">-->
+        </div>
+    </nav>
+    
+    <div class="imagen_user" >
+        <img class="imagen" src="../assets/user.svg"/>
+    </div>
+    <div class="principal">
+        <form action="index.html" class="login">
             <h3>Inicia sesion</h3>
-            <input type="text" placeholder="Correo Electronico">
-            <input type="password" placeholder="Contraseña">
+            <input  id="input"type="text" placeholder="Correo Electronico">
+            <input id="input"type="password" placeholder="Contraseña">
             <button>Entrar</button>
         </form>
-        <form action="" class="Register"></form>
+        <form action="" class="register">
             <h3>Registrate</h3>
-            <input type="text" placeholder="Nombre Completo">
-            <input type="email" placeholder="Correo Electronico">
-            <input type="password" placeholder="Contraseña">
+            <input id="input"type="text" placeholder="Nombre Completo">
+            <input id="input"type="email" placeholder="Correo Electronico">
+            <input id="input"type="password" placeholder="Contraseña">
             <button>Registrarse</button>
+
+        </form>
             <!--<input type="number" placeholder="Numero Celular">
             <input type="text" placeholder="Direccion">-->
     </div>
+
+    <footer>
+        <div class="footer-right">
+            <a href="#"  class="fa-instagram"></a>
+            <a href="#" class="fa-twitter"> </a>
+            <a href="#" class="fa-whatsappp"></class=></a>
+            <a href="#" class="fa-correo"> </a>
+
+        </div>
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+
+                <a href="#">Como comprar</a>
+
+                <a href="#">Empresas asociadas</a>
+
+                <a href="#">Terminos y condiciones</a>
+
+                <a href="#">Nosotros</a>
+
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
