@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+:root{
+    --principal: #D0EFD5;
+    --verde_uno: rgb(225, 255, 177);
+    --verde_dos: rgb(199, 242, 164);
+    --verde_tres: rgb(182, 227, 136);
+    --amarillo: rgb(252, 255, 178);
+    }
+.nav{
+    background-color: var(--principal);
+    height: 80px;
+}
+.nav_container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center; 
+}
+.nav_label{
+    cursor: pointer;
+}
+.nav_menu{
+    width: 10%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+    cursor: pointer;
+}
+.nav_item {
+    color: black;
+    text-decoration: none;
+  
+}
+.nav_input {
+    display: none;
+}
+.nav_menu{
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: var(--principal);
+    width: 50%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+}
+.nav_input:checked + .nav_menu{
+    clip-path: circle(100% at center);
+}
+.nav_logo{
+    font-size: 1.5em;
+    font-weight: 900;
+    height: 100%;
+    width: 80%;
+}
+.car_shopping{
+    width: 10%;
+    display: flex;
+    align-content: center;
+    height: 100%;
+}
+.car_shopping #car{
+    margin-top: 1.7rem;
+    width: 100%;
+    background-image: url("../assets/cartShopping.svg");
+    background-repeat: no-repeat;
+}

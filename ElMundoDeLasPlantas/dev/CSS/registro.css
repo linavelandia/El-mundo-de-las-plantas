@@ -112,13 +112,6 @@
     border-radius: 3rem;
     margin-bottom: 1.5rem;
 }
-/*.login input{
-    display: block;
-    height: 3rem;
-    background: var(--principal);
-    border: none;
-    margin-bottom: 1rem;
-}*/
 .login button{
     width: 4rem;
     height: 2rem;
@@ -127,8 +120,9 @@
     font-weight: 900;
 }
 
-.login  #input,
-.register  #input{
+.login  .input,
+.register  .input{
+    width: 20rem;
     display: block;
     height: 3rem;
     background: var(--principal);
@@ -149,14 +143,7 @@
     padding: 1rem 2rem;
     border-radius: 3rem;
     margin-bottom: 1.5rem;
-}/*
-.register input{
-    display: block;
-    height: 3rem;
-    background: var(--principal);
-    border: none;
-    margin-bottom: 1rem;
-}*/
+}
 .register button{
     width: 5rem;
     height: 2.3rem;
