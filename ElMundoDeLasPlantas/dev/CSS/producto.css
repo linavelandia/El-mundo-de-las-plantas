@@ -79,3 +79,253 @@
     background-image: url("../assets/cartShopping.svg");
     background-repeat: no-repeat;
 }
+
+
+
+.presentacion_producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.imagen_producto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.imagen_producto img{
+    width: 70%;
+}
+.precio_cantidad_producto p{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.cantidad_producto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cuadro_cantidad{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.botones_cantidades{
+    border: none;
+    background: none;
+}
+
+.Pagar_button{
+    width: 100%;
+    height: 7vh;
+    background-color: var(--principal);
+    border: none;
+    font-weight: 700
+}
+.descripcion_producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 1rem 1rem 1rem;
+}
+.descripcion_producto h2{
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: rgb(0,128,0);
+}
+.descripcion_producto img{
+    border-radius: 100%;
+    width: 100%;
+    height: 45vh;
+    margin-top: 2rem;
+}
+
+
+
+footer{
+    width: 100%;
+    display: inline-block;
+    height: 33vh;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--principal);
+    margin-top: 1.5rem;
+}
+
+.footer-left p {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  /* Footer links */
+  p.footer-links {
+    font-size: medium;
+    margin: 1.5rem;
+    padding: 0;
+    transition: ease .25s;
+  }
+  
+p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+  }
+
+  .footer-links a:before {
+    content: "·";
+    font-size: medium;
+    left: 0;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+.footer-links .link-1:before {
+    content: none;
+  }
+  
+.footer-right {
+    float: right;   
+    margin: 1.5rem 6rem;
+  }
+  
+.footer-right a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 5px;
+    margin-left: 3px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition:all .25s;
+}
+    /**/
+.fa-instagram{
+    position: absolute;
+    background-image: url(../assets/instagram.png);
+}
+.fa-twitter{
+    background-image: url(../assets/gorjeo.png);
+}
+.fa-whatsappp{
+    background-image: url(../assets/whatsapp.png);
+}
+.fa-correo{
+    background-image: url(../assets/correo.png);
+}
+  
+.footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  
+ p.footer-links a:hover{text-decoration:underline;}
+  
+@media (max-width: 700px){
+    .nav_label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav_item{
+        display: block;
+    }
+    .nav_menu{
+        width: 100%;
+    }
+    .footer-left, .footer-right {
+        text-align: center;
+      }
+      .footer-right {
+        float: none;
+        margin: 1.5rem 6rem;
+      }
+      .footer-left p.footer-links {
+        line-height: 1.8;
+      }
+    
+}
+
+@media (max-width: 700px){
+    .nav_label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav_item{
+        display: block;
+    }
+    .nav_menu{
+        width: 100%;
+    }
+    .footer-left, .footer-right {
+        text-align: center;
+      }
+      .footer-right {
+        float: none;
+        margin: 1.5rem 6rem;
+      }
+      .footer-left p.footer-links {
+        line-height: 1.8;
+      }
+    
+}
+
+@media (min-width: 800px){
+    .presentacion_producto{
+        width: 100%;
+        height: 55vh;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .imagen_producto{
+        margin-top: 2rem;
+        width: 50%;
+        height: 58vh;
+    }
+    .precio_cantidad_producto{
+        width: 40%;
+    }
+    .cantidad_producto{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .cantidad_producto p{
+        width: 15%;
+    }
+    .cuadro_cantidad{
+        width: 85%;
+    }
+    
+    .descripcion_producto{
+        flex-direction: row;
+        margin-top: 3rem;
+    }
+    .texto_descriptivo_producto{
+        width: 50%;
+    }
+    .segunda_imagen_producto{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        
+    }
+    .segunda_imagen_producto img{
+        width: 440px;
+        height: 440px;
+        margin-left: 6rem;
+    }
+
+
+}

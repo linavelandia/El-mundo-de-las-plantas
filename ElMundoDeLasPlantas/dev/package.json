@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
+    "create-react-app": "^5.0.1",
     "express": "^4.18.2"
   }
 }
