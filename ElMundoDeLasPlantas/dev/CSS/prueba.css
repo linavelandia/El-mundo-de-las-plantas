@@ -1,0 +1,48 @@
+.hola{
+    background-image: url("../assets/cactus1.jpg");
+    width: 100px;
+    height: 100px;
+}
+/*
+.slider{
+    aspect-ratio: 10 / 16;
+    width: 300px;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-align: x mandatory;
+}
+.slider img{
+    width: 100%;
+    left: 0;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
+}*/
+section{
+    display: flex;
+    width: 50%;
+    height: 50vh;
+}
+section .slider{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+
+}
+.slider img{
+    width: 100%;
+}
+
+section .slider:hover{
+    cursor: crosshair;
+    width: 25%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+

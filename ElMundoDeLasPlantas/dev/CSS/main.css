@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 *{
     margin: 0;
@@ -57,6 +58,7 @@
     align-items: center;
     clip-path: circle(0 at center);
     transition: clip-path 1s ease-in-out;
+    z-index: 3;
 }
 .nav_input:checked + .nav_menu{
     clip-path: circle(100% at center);
@@ -80,27 +82,60 @@
     background-repeat: no-repeat;
 }
 /*section */
+.contenedor_section_uno_principal:hover{
+    background: #38523e;
+}
 .contenedor_section_uno_principal{
     display: flex;
     flex-direction: column;
+    background-image: url(https://www.ipura.ch/wp-content/uploads/2015/01/fond-slider.jpg);
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    height: 58vh;
+    position: relative
+}
+.contenedor_section_uno_principal::after{
+    content: "";
+    width: max-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 0;
+}
+.lado-uno-section-principal{
+    position: relative;
 }
 .titulo_pagina_principal{
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: 500;
+    position: relative;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--principal);
+    font-size: 2.5rem;
+    font-weight: 400;
     margin: 2rem 0rem 2rem 0rem;
+    z-index: 1;
+    text-shadow: 3px 3px 6px #101412;
 }
 .parrafo_pagina_principal{
-    font-size: smaller;
     width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
+    font-weight: 800;
+    padding: 0 1rem 1rem 1rem;
+    z-index: 1;
+    position: relative;
+    color: aliceblue;
 }
 .contenedor_button_compras{
     display: flex;
+    position: relative;
     width: 100%;
     justify-content: center;
     margin: auto;
+    z-index: 1;
 }
 .compra_pagina_principal:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -113,8 +148,12 @@
     height: 4.5rem;
     font: menu;
     cursor: pointer;
-    font-style: italic;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
 }
 .lado-dos-section-principal{
     display: flex;
@@ -134,49 +173,48 @@
     margin: 1rem 0rem 1rem 0rem;
 }
 
-
-/*slider */
-.slider{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    height: 70vh;
-}
-.slider ul{
+.contenedor-slider{
     display: flex;
-    padding: 0;
-    width: 300%;
+    width: 90%;
+    height: 35vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contenedor-slider .slider{
+    width: 0px;
+    display: flex;
+    text-align: center;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s ease;
 
-    animation: cambio 20s infinite;
 }
-.slider li {
+.slider img{
     width: 100%;
-    list-style: none;
 }
-.slider li img{
-    width: 100%;
-    height: 60vh;
-    margin-bottom: 1rem;
-}
-.slider li a{
-    cursor: pointer;
-    font-size: 1.3rem;
-    background-color: var(--principal);
+.slider a{
+    text-decoration: none;
+    display: flex;
     color: black;
-    text-decoration: none;
-    padding: 15px;
-    font-style: italic;
-    font-weight: 500;
-    border-radius: 0.5rem;
-    /*color: var(--verde_tres);
-    text-decoration: none;
-    margin: 1rem 1rem 1rem 1rem;
-    border: 2px solid var(--amarillo);
-    padding: 10px;*/
+    border: 2px solid var(--principal);
+    width: 4.5rem;
+    height: 2.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
-.slider li a:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+.contenedor-slider .slider:hover{
+    cursor: crosshair;
+    width: 10%;
+    opacity: 1;
+    filter: contrast(120%);
 }
+
+
 @keyframes cambio{
     0% {margin-left: 0;}
     33%{margin-left: 0;}
@@ -196,7 +234,6 @@ footer{
     text-align: center;
     text-decoration: none;
     background-color: var(--principal);
-    margin-top: 1.5rem;
 }
 
 .footer-left p {
@@ -226,6 +263,7 @@ p.footer-links a {
     left: 0;
     display: inline-block;
     padding-right: 5px;
+    margin-bottom: 1rem;
   }
   
 .footer-links .link-1:before {
@@ -293,29 +331,39 @@ p.footer-links a {
       .footer-left p.footer-links {
         line-height: 1.8;
       }
+      /*.slider{
+        width: 80%;
+        height: 50vh;
+    }*/
     
+}
+@media (min-width: 477px) and (max-width: 799px) {
+    .contenedor-slider{
+        height: 50vh;
+    }
 }
 @media (min-width: 800px){
     .contenedor_section_uno_principal{
-        flex-direction: row;
-        padding-top: 3.5rem;
-        margin: auto;
         margin-bottom: 3rem;
+        background-size: 100%;
+        height: 61vh;
     }
+    
     .lado-uno-section-principal{
         width: 50%;
     }
     .parrafo_pagina_principal{
-        font-size: larger;
+        font-size: 1.5rem;
+        color: aliceblue
     }
     .compra_pagina_principal{
-        width: 15rem;
-        height: 5.5rem;
-       
-        font-size: 1.3rem;
+        margin-top: 1rem;
+        width: 13rem;
+        height: 4.5rem;
+        font-size: 1.1rem;
     }
     .titulo_pagina_principal{
-        font-size: 2.8rem;
+        font-size: 3.8rem;
     }
     .imagen_pagina_principal{
         width: 70%;
@@ -328,11 +376,15 @@ p.footer-links a {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
-    .slider{
-        width: 43%;
-        height: 75vh;
+    .contenedor-slider{
+        display: flex;
+        width: 70%;
+        max-width: 750px;
+        height: 70vh;
+        margin: 0 auto;
     }
-    .slider li a{
-        font-size: 1.6rem;
-    }
+    /*.contenedor-slider .slider:hover{
+       width: 5%;
+    }*/
+
 }
