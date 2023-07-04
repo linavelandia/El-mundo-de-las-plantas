@@ -82,13 +82,11 @@
     background-repeat: no-repeat;
 }
 /*section */
-.contenedor_section_uno_principal:hover{
-    background: #38523e;
-}
+
 .contenedor_section_uno_principal{
     display: flex;
     flex-direction: column;
-    background-image: url(https://www.ipura.ch/wp-content/uploads/2015/01/fond-slider.jpg);
+    background-image: url(https://img.fotocommunity.com/kleine-oase-e3521a38-6c86-4170-b968-de058c0071b4.jpg?height=1080);
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
@@ -128,6 +126,7 @@
     z-index: 1;
     position: relative;
     color: aliceblue;
+    font-size: 20px;
 }
 .contenedor_button_compras{
     display: flex;
@@ -167,16 +166,17 @@
     margin-top: 2rem;
 }
 .titulo_category_pagina_principal{
+    color: seagreen;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: 500;
-    margin: 1rem 0rem 1rem 0rem;
+    margin: 3rem 0rem 2rem 0rem;
 }
 
 .contenedor-slider{
     display: flex;
     width: 90%;
-    height: 35vh;
+    height: 38vh;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -209,22 +209,118 @@
 
 .contenedor-slider .slider:hover{
     cursor: crosshair;
-    width: 10%;
+    width: 8%;
     opacity: 1;
     filter: contrast(120%);
 }
+.cards_opiniones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a2e24;
+}
+.titulo_testimonios{
+    color: #aafcce;
+    padding-top: 1rem;
+    font-size: xx-large;
 
+}
+.h4_testimonios{
+    padding: 1rem;
+    color: white;
+}
+.card{
+    background-color: var(--principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem 2rem 2rem;
+    margin: 1rem;
+    border-radius: 2rem;
 
-@keyframes cambio{
-    0% {margin-left: 0;}
-    33%{margin-left: 0;}
+}
+.card h5{
+    font-size: large;
+    margin-top: 22px;
+}
+.imagenes_cards_opiniones {
+    width: 45%;
+    height: 120px;
+    border-radius: 49%;
+    margin-bottom: 21px;
+}
+.promocion_instagram{
+    width: 100%;
+    height: 28vh;
+    display: flex;
+}
+.enlace_insta{
+    text-decoration: none;
+    color: rgb(70, 138, 56);
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+}
 
-    33%{margin-left: -100%;}
-    63%{margin-left: -100%;}
+.datos_adicionales{
+    width: 100%;
+}
+.quienes_somos{
+    display: flex;
+    flex-direction: column-reverse;
+    background: #c0e5be;
+}
+.empresas_terminos{
+    display: flex;
+    flex-direction: column;
 
-    63%{margin-left: -200%;}
-    100%{margin-left: -200%;}
-   
+    background: #c0e5be ;
+}
+.como_comprar{
+    display: flex;
+    flex-direction: column-reverse;
+
+    background: #f1e9be;
+}
+.imagenes_de_adicionales{
+    height: 315px;
+}
+.texto_adicionales{
+    text-align: center;
+    width: 100%;
+}
+.texto_adicionales h2{
+    color: seagreen;
+}
+.imagenes_de_adicionales img{
+    
+}
+.parrafos_de_adicionales{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 14px;
+}
+.boton_para_registro{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aregistro{
+    text-decoration: none;
+    color: black;
+    font-size: 27px;
+}
+.boton_para_registro:hover{
+    cursor: pointer;
+}
+#aregistro:hover{
+    color: seagreen;
 }
 
 footer{
@@ -346,7 +442,7 @@ p.footer-links a {
     .contenedor_section_uno_principal{
         margin-bottom: 3rem;
         background-size: 100%;
-        height: 61vh;
+        height: 68vh;
     }
     
     .lado-uno-section-principal{
@@ -386,5 +482,74 @@ p.footer-links a {
     /*.contenedor-slider .slider:hover{
        width: 5%;
     }*/
-
+    .quienes_somos{
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 0;
+        background-image: url("../assets/quienes_somos.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        position: relative;
+    }
+    .quienes_somos::after{
+        background-color: rgb(3 3 3 / 36%);
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .quienes_somos #imagen_logo{
+        height: 316px;
+        width: 337px;
+        border-radius: 21%;
+        z-index: 1;
+    }
+    #card_texto_quienes_somos{
+        z-index: 1;
+        padding: 2rem;
+    }
+   
+    #titulo_quienes_somos{
+        font-size: xxx-large;
+        color: #f0f1e2;
+    }
+    #parrafo_quienes_somos{
+        font-size: 20px;
+        font-weight: 600;
+        color: aliceblue;
+    }
+    .empresas_terminos{
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .como_comprar{
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    
+    .imagenes_de_adicionales{
+        width: 50%;
+    }
+    #imagen_logo{
+        height: 487px;
+        /* width: 48%; */
+        width: 514px;
+        margin: auto;
+    }
+    .texto_adicionales{
+        width: 50%;
+    }
+    .container_cards{
+        display: flex;
+        flex-direction: row;
+    }
+    .enlace_insta{
+        display: flex;
+         align-items: center;
+    }
 }

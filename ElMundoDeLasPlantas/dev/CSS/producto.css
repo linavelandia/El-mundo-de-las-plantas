@@ -98,10 +98,14 @@
 }
 .imagen_producto img{
     width: 70%;
+    border-radius: 10%;
 }
 .precio_cantidad_producto p{
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+}
+#contador{
+    font-size: 25px;
 }
 .cantidad_producto{
     display: flex;
@@ -120,6 +124,10 @@
 .botones_cantidades{
     border: none;
     background: none;
+    font-size: 22px;
+}
+.botones_cantidades:hover{
+    cursor: pointer;
 }
 
 .Pagar_button{
@@ -128,6 +136,9 @@
     background-color: var(--principal);
     border: none;
     font-weight: 700
+}
+.Pagar_button:hover{
+    cursor: pointer;
 }
 .descripcion_producto{
     display: flex;
